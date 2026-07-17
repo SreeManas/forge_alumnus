@@ -98,12 +98,12 @@
   color-scheme: light;
 
   /* Colors — Overlays */
-  --hero-overlay-1:    rgba(248, 250, 252, 0.5);
-  --hero-overlay-2:    rgba(248, 250, 252, 0.7);
+  --hero-overlay-1:    rgba(248, 250, 252, 0.2);
+  --hero-overlay-2:    rgba(248, 250, 252, 0.4);
   --mini-player-bg:    rgba(255, 255, 255, 0.85);
   --logo-filter:       invert(1) grayscale(100%);
   --logo-filter-hover: invert(1) grayscale(100%);
-  --hero-img-opacity:  0.9;
+  --hero-img-opacity:  1.0;
   --navbar-logo-filter: invert(1);
   
   --bg-overlay-subtle: rgba(0,0,0,0.03);
@@ -212,7 +212,7 @@
   --mini-player-bg:    rgba(10, 10, 12, 0.85);
   --logo-filter:       grayscale(100%);
   --logo-filter-hover: grayscale(0%);
-  --hero-img-opacity:  0.9;
+  --hero-img-opacity:  1.0;
   --navbar-logo-filter: none;
   
   --bg-overlay-subtle: rgba(255,255,255,0.03);
