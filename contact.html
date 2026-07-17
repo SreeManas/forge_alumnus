@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Contact Talkiepedia — Get in touch with us for partnerships, feedback, or inquiries.">
+  <title>Contact Us — Talkiepedia</title>
+  <link rel="icon" href="https://talkiepedia.forgealumnus.com/image/fav.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    .contact-hero {
+      position: relative;
+      padding: var(--space-20) 0 var(--space-12);
+    }
+    .contact-hero h1 {
+      font-size: var(--text-4xl);
+      margin-bottom: var(--space-4);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: flex-start;
+    }
+    
+    .contact-info {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+    }
+    .contact-info h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-6);
+    }
+    .contact-method {
+      display: flex;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+    .contact-method-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      background: rgba(124, 58, 237, 0.1);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-lg);
+      flex-shrink: 0;
+    }
+    .contact-method-text h3 {
+      font-size: var(--text-base);
+      margin-bottom: var(--space-1);
+    }
+    .contact-method-text p, .contact-method-text a {
+      color: var(--text-secondary);
+      font-size: var(--text-sm);
+    }
+    .contact-method-text a:hover {
+      color: var(--accent-primary);
+    }
+
+    .contact-form-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+    }
+    .contact-form-container h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-6);
+    }
+    .form-group {
+      margin-bottom: var(--space-5);
+    }
+    .form-group label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      margin-bottom: var(--space-2);
+      color: var(--text-primary);
+    }
+    .form-control {
+      width: 100%;
+      background: var(--bg-page);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      transition: all var(--duration-fast) var(--ease-out);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+      .contact-hero h1 { font-size: var(--text-3xl); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="navbar-logo" aria-label="Talkiepedia Home">
+        <img src="https://talkiepedia.forgealumnus.com/image/logo.png" alt="Talkiepedia logo">
+      </a>
+      <div class="navbar-links" id="navLinks" role="menubar">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="explore.html" role="menuitem">Explore</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="contact.html" class="active" role="menuitem">Contact</a>
+      </div>
+      <div class="navbar-right">
+        <button class="navbar-search-btn" id="navSearchBtn" aria-label="Open AI Search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="search-btn-text">Search</span>
+          <kbd aria-hidden="true">⌘K</kbd>
+        </button>
+        <button class="navbar-profile" aria-label="User Profile">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="navbar-spacer"></div>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    
+    <section class="contact-hero">
+      <div class="container reveal">
+        <span class="section-label">Get in Touch</span>
+        <h1>We'd love to hear from <span class="text-gradient">you</span></h1>
+        <p style="color: var(--text-secondary); max-width: 600px; font-size: var(--text-lg);">
+          Have a question, feedback, or want to suggest a guest? Drop us a message and we'll get back to you as soon as possible.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info reveal">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+              <div class="contact-method-text">
+                <h3>Our Office</h3>
+                <p>6th Floor, N-Heights, Hitech City<br>Hyderabad, Telangana, India</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+              <div class="contact-method-text">
+                <h3>Call Us</h3>
+                <a href="tel:08031411741">080-3141-1741</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+              <div class="contact-method-text">
+                <h3>Email Us</h3>
+                <a href="mailto:talkiepedia@forgealumnus.com">talkiepedia@forgealumnus.com</a>
+              </div>
+            </div>
+            
+            <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-4); font-size: var(--text-lg);">Follow Us</h3>
+            <div style="display: flex; gap: var(--space-4);">
+              <a href="https://www.youtube.com/@Talkiepedia" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="YouTube" style="padding: 10px;">
+                <i class="fa-brands fa-youtube" style="font-size: var(--text-xl);" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/talkiepedia/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Instagram" style="padding: 10px;">
+                <i class="fa-brands fa-instagram" style="font-size: var(--text-xl);" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/dhananjay-dubey-35aa31169/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="LinkedIn" style="padding: 10px;">
+                <i class="fa-brands fa-linkedin" style="font-size: var(--text-xl);" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container reveal" style="transition-delay: 100ms;">
+            <h2>Send a Message</h2>
+            <form onsubmit="event.preventDefault(); showContactSuccess(this);">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" class="form-control">
+                  <option>General Inquiry</option>
+                  <option>Guest Suggestion</option>
+                  <option>Partnership</option>
+                  <option>Feedback</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo" aria-label="Talkiepedia Home">
+            <img src="https://talkiepedia.forgealumnus.com/image/logo.png" alt="Talkiepedia logo">
+          </a>
+          <p>At Talkiepedia, we believe every voice has a story worth sharing. Our mission is to bring you authentic, thought-provoking conversations that inspire career growth and foster connection.</p>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@Talkiepedia" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/talkiepedia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dhananjay-dubey-35aa31169/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#learning-paths">Learning Paths</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Contact</h5>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <div class="footer-contact-text">
+              <span>Address</span>
+              <a href="https://www.google.com/maps/search/6th+floor,+N-heights,+Hitech-City,+Hyderabad" target="_blank" rel="noopener noreferrer">6th Floor, N-Heights, Hitech City, Hyderabad</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+            <div class="footer-contact-text">
+              <span>Call Us</span>
+              <a href="tel:08031411741">080-3141-1741</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+            <div class="footer-contact-text">
+              <span>Email</span>
+              <a href="mailto:talkiepedia@forgealumnus.com">talkiepedia@forgealumnus.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright 2026 © All Rights Reserved by Forge Alumnus Services Pvt. Ltd.</p>
+        <p>Crafted with 💜 by <a href="https://portfolio.forgealumnus.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary);">Forge Alumnus</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Talkie AI Overlay -->
+  <div class="talkie-overlay" id="talkieOverlay" role="dialog" aria-modal="true" aria-label="Talkie AI Search">
+    <button class="talkie-close" id="talkieClose" aria-label="Close search">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <div class="talkie-search-container">
+      <input type="text" class="talkie-search-input" id="talkieInput" placeholder="Ask anything about careers..." aria-label="Search" autocomplete="off">
+    </div>
+    <div class="talkie-suggestions" id="talkieSuggestions">
+      <h4>💡 Try asking</h4>
+      <div class="trending-questions" style="justify-content:center;">
+        <button class="trending-chip" data-query="How do I crack Microsoft interviews?">How do I crack Microsoft interviews?</button>
+        <button class="trending-chip" data-query="What's it like working in aerospace?">What's it like working in aerospace?</button>
+      </div>
+    </div>
+    <div class="talkie-results" id="talkieResults" style="display:none;"></div>
+    <div class="talkie-related" id="talkieRelated" style="display:none;"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showContactSuccess(form) {
+      const btn = form.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Message Sent!';
+      btn.style.backgroundColor = 'var(--success)';
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.style.backgroundColor = '';
+        btn.style.pointerEvents = '';
+        form.reset();
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
