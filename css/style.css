@@ -2166,7 +2166,7 @@ h4 { font-size: var(--text-xl); }
   height: 46px;
   border-radius: 6px;
   object-fit: cover;
-  background: var(--surface-light);
+  background: var(--bg-elevated);
   flex-shrink: 0;
   will-change: transform;
 }
@@ -2240,7 +2240,7 @@ h4 { font-size: var(--text-xl); }
 }
 .player-btn.play-pause {
   background: var(--text-base);
-  color: var(--bg-default);
+  color: var(--bg-primary);
   width: 42px;
   height: 42px;
 }
@@ -2278,13 +2278,13 @@ h4 { font-size: var(--text-xl); }
   top: 0;
   left: 0;
   height: 100%;
-  background: var(--primary);
+  background: var(--accent-primary);
   border-radius: 2px;
   width: 0%;
   transition: width 0.1s linear;
 }
 .player-progress-bar:hover .player-progress-fill {
-  background: var(--primary-light);
+  background: var(--accent-secondary);
 }
 .player-progress-fill::after {
   content: '';
