@@ -556,7 +556,22 @@ function initCategoryFilter() {
       });
       pill.classList.add('active');
       pill.setAttribute('aria-selected', 'true');
-      // In a full implementation, this would filter the episode grid
+      // Filter the episode grid
+      const category = pill.dataset.category;
+      const cards = document.querySelectorAll('.podcast-card');
+      
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const categories = (card.dataset.categories || '').split(',');
+          if (categories.includes(category)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
     });
   });
 }
