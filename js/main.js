@@ -5,9 +5,21 @@
    ============================================================ */
 
 // ============================================================
-// 1. DOM Ready
+// 1. Theme Initialization (Run immediately to prevent FOUC)
+// ============================================================
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+} else {
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('theme', 'light');
+}
+
+// ============================================================
+// 2. DOM Ready
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initNavigation();
   initTalkieAI();
   initScrollReveal();
@@ -58,6 +70,44 @@ function initNavigation() {
         document.body.style.overflow = '';
       }
     });
+  });
+}
+
+// ============================================================
+// 2b. Theme Toggle
+// ============================================================
+function initTheme() {
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  
+  updateThemeIcons(currentTheme);
+  
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Add transition class to body for smooth color switching
+      document.body.classList.add('theme-transitioning');
+      
+      const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcons(newTheme);
+      
+      // Remove transition class after transition completes to not interfere with hover states
+      setTimeout(() => {
+        document.body.classList.remove('theme-transitioning');
+      }, 300);
+    });
+  });
+}
+
+function updateThemeIcons(theme) {
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn i');
+  themeToggles.forEach(icon => {
+    if (theme === 'light') {
+      icon.className = 'fa-solid fa-moon';
+    } else {
+      icon.className = 'fa-solid fa-sun';
+    }
   });
 }
 
